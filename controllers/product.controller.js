@@ -1,21 +1,34 @@
 const productModel = require("../models/products.model");
+const categoryModel = require("../models/category.mode");
 
 // Create a new product
 exports.createProduct = async (req, res) => {
   try {
-    const { name, description, price, imageUrl } = req.body;
-    const newProduct = new productModel({ name, description, price, imageUrl });
-    await newProduct.save();
-    res.status(201).json(newProduct);
+    const { name, description, price, imageUrl, rating, categoryId } = req.body;
+
+    const newProduct = new productModel({
+      name,
+      description,
+      price,
+      imageUrl,
+      rating,
+      categoryId,
+    });
+
+    const savedProduct = await newProduct.save();
+    res.status(201).json(savedProduct);
   } catch (error) {
-    res.status(500).json({ error: "Failed to create product" });
+    console.error(error);
+    res
+      .status(500)
+      .json({ error: "Failed to create product", details: error.message });
   }
 };
 
 // Get all products
 exports.getAllProducts = async (req, res) => {
   try {
-    const products = await productModel.find();
+    const products = await productModel.find().populate("categoryId");
     res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch products" });
@@ -25,7 +38,9 @@ exports.getAllProducts = async (req, res) => {
 // Get a product by ID
 exports.getProductById = async (req, res) => {
   try {
-    const product = await productModel.findById(req.params.id);
+    const product = await productModel
+      .findById(req.params.id)
+      .populate("categoryId");
     if (!product) {
       return res.status(404).json({ error: "Product not found" });
     }
@@ -39,11 +54,13 @@ exports.getProductById = async (req, res) => {
 exports.updateProduct = async (req, res) => {
   try {
     const { name, description, price, imageUrl } = req.body;
-    const updatedProduct = await productModel.findByIdAndUpdate(
-      req.params.id,
-      { name, description, price, imageUrl },
-      { new: true },
-    );
+    const updatedProduct = await productModel
+      .findByIdAndUpdate(
+        req.params.id,
+        { name, description, price, imageUrl },
+        { new: true },
+      )
+      .populate("categoryId");
     if (!updatedProduct) {
       return res.status(404).json({ error: "Product not found" });
     }
@@ -100,7 +117,7 @@ exports.searchProducts = async (req, res) => {
       query.rating = rating; // Exact rating match
     }
 
-    const products = await productModel.find(query);
+    const products = await productModel.find(query).populate("categoryId");
     res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ error: "Failed to search products" });

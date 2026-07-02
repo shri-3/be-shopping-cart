@@ -5,6 +5,7 @@ const connectDB = require("./db/db.connect");
 const productRoutes = require("./routes/product.routes");
 const featureProductRoutes = require("./routes/feature-product.routes");
 const wishlistProductRoutes = require("./routes/wishlist-product.routes");
+const categoryProductRoutes = require("./routes/category.routes");
 const app = express();
 app.use(bodyParser.json());
 // Enable CORS for a specific origin
@@ -16,6 +17,7 @@ connectDB();
 app.use("/api", productRoutes);
 app.use("/api", featureProductRoutes);
 app.use("/api", wishlistProductRoutes);
+app.use("/api", categoryProductRoutes);
 
 app.use((req, res, next) => {
   res.status(404).json({ error: "Route not found use /api/events" });
