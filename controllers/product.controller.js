@@ -90,12 +90,13 @@ exports.deleteProduct = async (req, res) => {
  * price: number (optional) - Search for products by exact price match
  * price range minPrice and maxPrice (optional) - Search for products within a price range
  * rating: number (optional) - Search for products by exact rating match
+ * categoryId: string (optional) - Search for products by category ID
  * Example request: GET /api/products/search?name=phone&price=499.99&rating=4.5&minPrice=100&maxPrice=500
  */
 
 exports.searchProducts = async (req, res) => {
   try {
-    const { name, price, rating } = req.query;
+    const { name, price, rating, categoryId } = req.query;
     const query = {};
 
     if (name) {
@@ -103,6 +104,9 @@ exports.searchProducts = async (req, res) => {
     }
     if (price) {
       query.price = price; // Exact price match
+    }
+    if (categoryId) {
+      query.categoryId = categoryId;
     }
     if (req.query.minPrice || req.query.maxPrice) {
       query.price = {};
