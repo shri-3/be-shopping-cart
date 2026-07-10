@@ -88,7 +88,7 @@ exports.deleteProduct = async (req, res) => {
  * product name, product price, product rating
  * Query parameters:
  * name: string (optional) - Search for products by name (case-insensitive)
- * price: number (optional) - Search for products by exact price match
+ * price: number (optional) - Search for products sort by prices ascending order and descending order
  * price range minPrice and maxPrice (optional) - Search for products within a price range
  * rating: number (optional) - Search for products by exact rating match
  * categoryId: string (optional) - Search for products by category ID. category ID should be an array of category IDs.
@@ -98,8 +98,10 @@ exports.deleteProduct = async (req, res) => {
 
 exports.searchProducts = async (req, res) => {
   try {
-    const { name, price, rating, categoryId, minPrice, maxPrice } = req.body;
+    const { name, priceShort, rating, categoryId, minPrice, maxPrice } =
+      req.body;
     const query = {};
+    const shortBy = {};
 
     if (name) {
       query.name = { $regex: name, $options: "i" }; // Case-insensitive search
@@ -112,8 +114,8 @@ exports.searchProducts = async (req, res) => {
       query.categoryId = { $in: objectCategoryIds };
     }
 
-    if (price) {
-      query.price = price; // Exact price match
+    if (priceShort) {
+      shortBy.price = priceShort; // sort by prices
     }
 
     if (minPrice || maxPrice) {
@@ -130,7 +132,10 @@ exports.searchProducts = async (req, res) => {
       query.rating = rating; // Exact rating match
     }
 
-    const products = await productModel.find(query).populate("categoryId");
+    const products = await productModel
+      .find(query)
+      .sort(shortBy)
+      .populate("categoryId");
     res.status(200).json(products);
   } catch (error) {
     res.status(500).json({ error: "Failed to search products" });
