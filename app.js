@@ -8,6 +8,7 @@ const wishlistProductRoutes = require("./routes/wishlist-product.routes");
 const categoryProductRoutes = require("./routes/category.routes");
 const app = express();
 app.use(bodyParser.json());
+app.use(express.json());
 // Enable CORS for a specific origin
 app.use(cors());
 

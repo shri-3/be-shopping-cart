@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const productModel = require("../models/products.model");
 const categoryModel = require("../models/category.mode");
 
@@ -90,33 +91,41 @@ exports.deleteProduct = async (req, res) => {
  * price: number (optional) - Search for products by exact price match
  * price range minPrice and maxPrice (optional) - Search for products within a price range
  * rating: number (optional) - Search for products by exact rating match
- * categoryId: string (optional) - Search for products by category ID
- * Example request: GET /api/products/search?name=phone&price=499.99&rating=4.5&minPrice=100&maxPrice=500
+ * categoryId: string (optional) - Search for products by category ID. category ID should be an array of category IDs.
+ * Example request: POST /api/products/search
+ * Data fields for search product: {name=phone, price=499.99, rating=4.5, minPrice=100, maxPrice=500}
  */
 
 exports.searchProducts = async (req, res) => {
   try {
-    const { name, price, rating, categoryId } = req.query;
+    const { name, price, rating, categoryId, minPrice, maxPrice } = req.body;
     const query = {};
 
     if (name) {
       query.name = { $regex: name, $options: "i" }; // Case-insensitive search
     }
+
+    if (categoryId && categoryId.length > 0) {
+      const objectCategoryIds = categoryId.map(
+        (id) => new mongoose.Types.ObjectId(id),
+      );
+      query.categoryId = { $in: objectCategoryIds };
+    }
+
     if (price) {
       query.price = price; // Exact price match
     }
-    if (categoryId) {
-      query.categoryId = categoryId;
-    }
-    if (req.query.minPrice || req.query.maxPrice) {
+
+    if (minPrice || maxPrice) {
       query.price = {};
-      if (req.query.minPrice) {
-        query.price.$gte = parseFloat(req.query.minPrice);
+      if (minPrice) {
+        query.price.$gte = parseFloat(minPrice);
       }
-      if (req.query.maxPrice) {
-        query.price.$lte = parseFloat(req.query.maxPrice);
+      if (maxPrice) {
+        query.price.$lte = parseFloat(maxPrice);
       }
     }
+
     if (rating) {
       query.rating = rating; // Exact rating match
     }

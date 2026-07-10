@@ -16,7 +16,7 @@ router.post("/products", createProduct);
 router.get("/products", getAllProducts);
 
 // Search products (must come before /:id route)
-router.get("/products/search", searchProducts);
+router.post("/products/search", searchProducts);
 
 // Get a product by ID
 router.get("/products/:id", getProductById);
