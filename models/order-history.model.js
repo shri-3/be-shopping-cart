@@ -10,6 +10,7 @@ const orderHistorySchema = new mongoose.Schema({
         required: true,
       },
       name: { type: String, required: true },
+      imageUrl: { type: String, required: true },
       quantity: { type: Number, required: true },
       price: { type: Number, required: true },
       totalPrice: { type: Number, required: true }, // Added totalPrice field

@@ -10,6 +10,7 @@ exports.createOrderHistory = async (req, res) => {
     const orderHistoryItems = products.map((product) => ({
       productId: product._id,
       name: product.name,
+      imageUrl: product.imageUrl,
       quantity: product.quantity,
       price: product.price,
       totalPrice: (product.price * product.quantity).toFixed(2), // Added totalPrice field
