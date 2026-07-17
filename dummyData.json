@@ -1,0 +1,202 @@
+[
+  [
+    {
+      "name": "Portable Waterproof Outdoor Speaker",
+      "description": "Rugged IPX7 waterproof mini speaker with punchy bass, 12-hour playtime, and a built-in lanyard for hiking.",
+      "price": 1899,
+      "imageUrl": "https://unsplash.com/photos/black-jbl-portable-speaker-on-brown-wooden-table-g5Y5kjOwGwQ",
+      "__v": 0,
+      "categoryId": "6a3e4af2d4b4fdc4922894ce",
+      "rating": 5
+    },
+    {
+      "name": "Smart Home Wireless Speaker Hub",
+      "description": "Premium 360-degree room-filling acoustic audio system with voice control assistants and dynamic ambient LED lighting circles.",
+      "price": 4599,
+      "imageUrl": "https://unsplash.com/photos/white-and-gray-google-smart-speaker-and-two-black-speakers-Fh3Dtg6QX4Q",
+      "__v": 0,
+      "categoryId": "6a3e4af2d4b4fdc4922894ce",
+      "rating": 4
+    },
+    {
+      "name": "Heavy Bass Dual Subwoofer Speaker",
+      "description": "High-fidelity party speaker pairing deep sub-bass drivers, dual tweeters, TWS stereo syncing, and a power bank option.",
+      "price": 3499,
+      "imageUrl": "https://unsplash.com/photos/three-speakers-sitting-on-top-of-a-table-Q6HUG_m1xKA",
+      "__v": 0,
+      "categoryId": "6a3e4af2d4b4fdc4922894ce",
+      "rating": 4
+    },
+    {
+      "name": "Pro Studio Over-Ear Headphones",
+      "description": "Professional acoustic monitor headphones featuring premium leather earcups, 40mm drivers, and detachable coiled cable.",
+      "price": 3899,
+      "imageUrl": "https://unsplash.com/photos/a-pair-of-headphones-sitting-on-top-of-each-other-A6hzRnwR3vM",
+      "__v": 0,
+      "categoryId": "6a3e4ac9d4b4fdc4922894cc",
+      "rating": 5
+    },
+    {
+      "name": "Active Sport Wireless Earbuds",
+      "description": "Ergonomic sweatproof secure-fit ear hooks with touch controls, ambient sound awareness settings, and a fast-charging case.",
+      "price": 2499,
+      "imageUrl": "https://unsplash.com",
+      "__v": 0,
+      "categoryId": "6a3e4ac9d4b4fdc4922894cc",
+      "rating": 4
+    },
+    {
+      "name": "Wireless Pro Gaming Controller",
+      "description": "High-performance wireless gamepad with ultra-low latency, tactile responsive switches, and ergonomic grip texturing.",
+      "price": 4299,
+      "imageUrl": "https://unsplash.com/photos/person-holding-game-controller-in-front-of-television-0woyPEJQ7jc",
+      "__v": 0,
+      "categoryId": "6a3e4ae0d4b4fdc4922894cd",
+      "rating": 5
+    },
+    {
+      "name": "Mechanical Tenkeyless Gaming Keyboard",
+      "description": "Compact layout mechanical keyboard equipped with hot-swappable linear switches, sound dampening foam, and clean ice-blue backlighting.",
+      "price": 3199,
+      "imageUrl": "https://unsplash.com/photos/black-and-orange-computer-keyboard-50uD7HzOLW8",
+      "__v": 0,
+      "categoryId": "6a3e4ae0d4b4fdc4922894cd",
+      "rating": 4
+    },
+    {
+      "name": "Mirrorless Full-Frame Camera Body",
+      "description": "High-resolution mirrorless camera featuring a advanced full-frame sensor, ultra-fast autofocus, and 4K uncropped video tracking.",
+      "price": 84999,
+      "imageUrl": "https://unsplash.com/photos/black-and-gray-canon-ae-1-camera-on-gray-sand-under-brown-dock-near-body-of-water-at-daytime-vasU4-TlC5I",
+      "__v": 0,
+      "categoryId": "6a3e4aa3d4b4fdc4922894ca",
+      "rating": 5
+    },
+    {
+      "name": "50mm f/1.4 Prime Portrait Lens",
+      "description": "Ultra-bright standard focal length lens delivering exceptional low-light performance and beautiful background bokeh separation.",
+      "price": 12499,
+      "imageUrl": "https://unsplash.com/photos/a-camera-lens-sitting-on-top-of-a-white-table-F3mYNHnAXu8",
+      "__v": 0,
+      "categoryId": "6a3e4aa3d4b4fdc4922894ca",
+      "rating": 4
+    },
+    {
+      "name": "3-Axis Motorized Gimbal Stabilizer",
+      "description": "Handheld cinema stabilizer for smooth handheld panning shots, featuring auto-tuning algorithms and tracking controls.",
+      "price": 9599,
+      "imageUrl": "https://unsplash.com/photos/black-camera-on-tripod-on-brown-sand-during-daytime-HJkSEXngH84",
+      "__v": 0,
+      "categoryId": "6a3e4aa3d4b4fdc4922894ca",
+      "rating": 4
+    },
+    {
+      "name": "Professional Carbon Fiber Tripod",
+      "description": "Ultra-lightweight yet rigid support frame system equipped with a heavy-duty ball head and variable height micro-adjustments.",
+      "price": 5499,
+      "imageUrl": "https://unsplash.com/photos/a-camera-on-a-tripod-on-a-blue-background-89Lb0-kqp1o",
+      "__v": 0,
+      "categoryId": "6a3e4aa3d4b4fdc4922894ca",
+      "rating": 5
+    },
+    {
+      "name": "Ultra-Slim 14-Inch Productivity Laptop",
+      "description": "Lightweight metallic laptop equipped with an advanced processor, vibrant display, and 14-hour battery life for modern professionals.",
+      "price": 64999,
+      "imageUrl": "https://unsplash.com/photos/macbook-pro-on-top-of-brown-table-1SAnrIxw5OY",
+      "__v": 0,
+      "categoryId": "6a3e4b03d4b4fdc4922894cf",
+      "rating": 5
+    },
+    {
+      "name": "Pro 11-Inch Digital Drawing Tablet",
+      "description": "High-resolution touch tablet featuring an ultra-responsive pressure pen, crisp display matrix, and split-screen multitasking capabilities.",
+      "price": 42999,
+      "imageUrl": "https://unsplash.com/photos/black-tablet-computer-on-black-table-aeSSYYWY27w",
+      "__v": 0,
+      "categoryId": "6a3e4b03d4b4fdc4922894cf",
+      "rating": 4
+    },
+    {
+      "name": "27-Inch Minimalist Desktop All-In-One",
+      "description": "Space-saving desktop workstation combining processing power directly inside a thin, modern display housing with wireless accessories.",
+      "price": 89999,
+      "imageUrl": "https://unsplash.com/photos/a-computer-monitor-sitting-on-top-of-a-white-desk-gVpXbCGG6jI",
+      "__v": 0,
+      "categoryId": "6a3e4b03d4b4fdc4922894cf",
+      "rating": 3
+    },
+    {
+      "name": "Convertible 2-in-1 Touchscreen Laptop",
+      "description": "Versatile laptop featuring a robust 360-degree flip hinge system that transforms it instantly into an ergonomic tablet view.",
+      "price": 54999,
+      "imageUrl": "https://unsplash.com/photos/a-macbook-with-lines-of-code-on-its-screen-on-a-busy-desk-m_HRfLhgABo",
+      "__v": 0,
+      "categoryId": "6a3e4b03d4b4fdc4922894cf",
+      "rating": 3
+    },
+    {
+      "name": "Ergonomic Sports Water Bottle",
+      "description": "BPA-free vacuum insulated stainless steel flask with a leak-proof straw lid, keeping drinks ice-cold during workouts.",
+      "price": 1299,
+      "imageUrl": "https://unsplash.com/photos/a-blender-sitting-on-top-of-a-table-next-to-a-pair-of-needles-bY116dGQ20k",
+      "__v": 0,
+      "categoryId": "6a55e445fa5c9b773d172054",
+      "rating": 3
+    },
+    {
+      "name": "High-Density Non-Slip Yoga Mat",
+      "description": "Eco-friendly extra thick fitness exercise mat providing comfortable cushioning and joint alignment tracks for intense floor routines.",
+      "price": 2199,
+      "imageUrl": "https://unsplash.com/photos/pink-dumbbell-on-pink-textile-erUC4fTtCuo",
+      "__v": 0,
+      "categoryId": "6a55e445fa5c9b773d172054",
+      "rating": 5
+    },
+    {
+      "name": "Adjustable Speed Jump Rope",
+      "description": "Tangle-free skipping rope fitted with ball bearings and memory foam anti-slip handles for agility cardio conditioning.",
+      "price": 799,
+      "imageUrl": "https://unsplash.com/photos/two-jump-ropes-on-a-white-background-4Y5mri1eRf0",
+      "__v": 0,
+      "categoryId": "6a55e445fa5c9b773d172054",
+      "rating": 4
+    },
+    {
+      "name": "Minimalist Matte White Smartphone Case",
+      "description": "Ultra-thin, shock-absorbent protective casing with precise button cutouts and a smooth anti-fingerprint matte exterior finish.",
+      "price": 1299,
+      "imageUrl": "Minimalist Matte White Smartphone Case",
+      "__v": 0,
+      "categoryId": "6a3e4ab5d4b4fdc4922894cb",
+      "rating": 4
+    },
+    {
+      "name": "Fast Charging Magnetic Wireless Pad",
+      "description": "Premium 15W induction wireless charger matrix engineered with alignment magnets for safe, thermal-regulated power distribution.",
+      "price": 2499,
+      "imageUrl": "https://unsplash.com/photos/a-close-up-of-a-mouse-on-a-table-1Y579--3k5M",
+      "__v": 0,
+      "categoryId": "6a3e4ab5d4b4fdc4922894cb",
+      "rating": 5
+    },
+    {
+      "name": "Aluminum Desktop Phone Stand Cradle",
+      "description": "Ergonomic multi-angle adjustable desktop holding station crafted with weighted stability bases and non-slip silicone protective pads.",
+      "price": 899,
+      "imageUrl": "https://unsplash.com/photos/silver-iphone-x-on-stand-wkKMBFAbj04",
+      "__v": 0,
+      "categoryId": "6a3e4ab5d4b4fdc4922894cb",
+      "rating": 4
+    },
+    {
+      "name": "Braided Nylon High-Speed Type-C Cable",
+      "description": "Heavy-duty 6ft reinforced charging and high-velocity data transmission sync cord with protective stress-relief strain collars.",
+      "price": 699,
+      "imageUrl": "https://unsplash.com/photos/four-usb-c-and-usb-a-cables-arranged-in-a-cross-g20jOLAalns",
+      "__v": 0,
+      "categoryId": "6a3e4ab5d4b4fdc4922894cb",
+      "rating": 5
+    }
+  ]
+]

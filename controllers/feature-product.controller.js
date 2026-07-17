@@ -31,9 +31,13 @@ exports.addFeaturedProduct = async (req, res) => {
 // Get all featured products
 exports.getFeaturedProducts = async (req, res) => {
   try {
-    const featuredProducts = await featureProductModel
-      .find()
-      .populate("productId");
+    const featuredProducts = await featureProductModel.find().populate({
+      path: "productId",
+      populate: {
+        path: "categoryId",
+        model: "Category",
+      },
+    });
     res.status(200).json(featuredProducts);
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch featured products" });
