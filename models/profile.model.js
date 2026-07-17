@@ -23,6 +23,9 @@ const profileSchema = new mongoose.Schema({
     type: String,
     enum: ["male", "female", "other"],
   },
+  primaryAddress: {
+    type: String,
+  },
   address: [
     {
       name: String,

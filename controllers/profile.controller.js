@@ -3,8 +3,16 @@ const profileModel = require("../models/profile.model");
 
 exports.createProfile = async (req, res) => {
   try {
-    const { firstName, lastName, email, phone, dob, gender, address } =
-      req.body;
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      dob,
+      gender,
+      primaryAddress,
+      address,
+    } = req.body;
 
     let processedAddress = [];
     if (Array.isArray(address)) {
@@ -21,6 +29,7 @@ exports.createProfile = async (req, res) => {
       phone,
       dob,
       gender,
+      primaryAddress,
       address: processedAddress,
     });
 
@@ -59,8 +68,16 @@ exports.updateProfileById = async (req, res) => {
       });
     }
     // 3. Destructure dynamic profile updates from request body
-    const { firstName, lastName, email, phone, dob, gender, address } =
-      req.body;
+    const {
+      firstName,
+      lastName,
+      email,
+      phone,
+      dob,
+      gender,
+      primaryAddress,
+      address,
+    } = req.body;
 
     // 4. Build a clean update payload dynamically to avoid wiping out omissions
     const updateFields = {};
@@ -70,9 +87,11 @@ exports.updateProfileById = async (req, res) => {
     if (phone !== undefined) updateFields.phone = phone;
     if (dob !== undefined) updateFields.dob = dob;
     if (gender !== undefined) updateFields.gender = gender;
+    if (primaryAddress !== undefined)
+      updateFields.primaryAddress = primaryAddress;
 
-    // Handle polymorphic multi-type address array cleanly
     if (address !== undefined) {
+      // Handle polymorphic multi-type address array cleanly
       updateFields.address = Array.isArray(address)
         ? address
         : address
